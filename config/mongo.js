@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const dburl = "mongodb+srv://employ:employ@proj2.fzzyq.mongodb.net/Prac-Bcrypt";
+const dburl = process.env.DBURL;
 
 mongoose.connect(dburl)
 .then(()=>{
